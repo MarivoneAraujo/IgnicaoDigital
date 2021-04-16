@@ -1,38 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Navbar from "./Navbar";
-import { FiHome } from "react-icons/fi";
-import { CgChevronDoubleRight } from "react-icons/cg";
-import { FiSettings } from "react-icons/fi";
+import Navbar from "../Article/NavBar/Navbar";
 import { FiGrid } from "react-icons/fi";
 import { BsList } from "react-icons/bs";
-import Card from "../Components/Card";
-import { FiSearch } from "react-icons/fi";
+import ArticleCardSection from "./ArticleCardSection/ArticleCardSection";
+import BreadCrumbs from "./BreadCrumbs/BreadCrumbs";
+import SubscribersCard from "../Article/SubscribersCard/SubscribersCard";
+import Pagination from "./Pagination/Pagination";
 
 const Background = styled.div`
   background-color: #f9f9f9;
-`;
-
-const ResultsBar = styled.div`
-  font-family: "Inter", sans-serif;
-  display: grid;
-  margin-top: 20px;
-  margin-left: 20px;
-  grid-template-columns: 0.4fr 0.05fr 0.05fr 0.05fr 2fr 0.1fr;
-  align-items: end;
-`;
-
-const SettingsIconWrapper = styled.div`
-  background-color: #787878;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 20px;
-  :hover {
-    cursor: pointer;
-    left: 9px;
-    transform: scale(1.1);
-  }
 `;
 
 const FilterResultsBar = styled.div`
@@ -59,15 +36,6 @@ const ListingSelect = styled.select`
 const MainInfoGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-`;
-const SubscribersCard = styled.div`
-  background-color: #ffff;
-  width: 300px;
-  height: 1452px;
-  margin-left: 20px;
-  margin-top: 25px;
-  box-shadow: 0.5px 0.5px 5px 0.5px lightgray;
-  border-radius: 0.3rem 0.3rem;
 `;
 
 const GridIconWrapper = styled.div`
@@ -98,7 +66,7 @@ const ListIconWrapper = styled.div`
 `;
 
 const StyledInput = styled.input`
-  width: 620px;
+  width: 636px;
   height: 40px;
   margin-top: 1.7rem;
   background-color: #ffffff;
@@ -115,41 +83,30 @@ const StyledInput = styled.input`
 `;
 
 function MainContent() {
+  const [textInput, setTextInput] = useState("");
+
+  const handleTextInput = (e) => {
+    setTextInput(e.target.value);
+  };
+
+    const allFeedCards = (card) => {
+    let cards = [];
+    for (let i = 0; i < card; i++) {
+      cards.push(<ArticleCardSection />);
+    }
+    return cards;
+  };
+  const limit = 5
+  
+  const cardsList = allFeedCards(limit);
+  
+  
+  // const filteredCards = cards.filter(i => i.name.includes(textInput))
+
   return (
     <Background>
       <Navbar />
-
-      <ResultsBar>
-        <div
-          style={{
-            fontSize: "1.2rem",
-          }}
-        >
-          Resultados
-        </div>
-        <div>|</div>
-        <FiHome
-          style={{
-            marginBottom: "0.2rem",
-          }}
-        />
-        <CgChevronDoubleRight
-          style={{
-            marginBottom: "0.1rem",
-          }}
-        />
-        <div>Cursos</div>
-
-        <SettingsIconWrapper>
-          <FiSettings
-            style={{
-              margin: "0.45rem",
-              color: "#FFFF",
-            }}
-          />
-        </SettingsIconWrapper>
-      </ResultsBar>
-
+      <BreadCrumbs />
       <FilterResultsBar>
         <div
           style={{
@@ -182,38 +139,24 @@ function MainContent() {
           />
         </ListIconWrapper>
       </FilterResultsBar>
-
       <MainInfoGrid>
-        <SubscribersCard>
-          <div>
-            <p>Preços</p>
+        <SubscribersCard />
 
-            <div>
-              <input type="checkbox" id="10" /> R$10
-            </div>
-            <div>
-
-              <input type="checkbox" id="10" /> R$10-R$100
-            </div>
-            <div>
-              <input type="checkbox" id="10" /> R$100-R$500
-            </div>
-            <div>
-              <input type="checkbox" id="10" /> R$500
-            </div>
-            <div>
-              <input type="checkbox" id="10" /> Todos
-            </div>
-          </div>
-
-          <input type="range" min="10" max="500" />
-        </SubscribersCard>
         <div>
-          <StyledInput type="text" placeholder="Busca" />
+          <StyledInput
+            type="text"
+            placeholder="Busca"
+            onChange={handleTextInput}
+            value={textInput}
+          />
 
-          <Card />
+          {cardsList.map((card) => {
+            return <ArticleCardSection />;
+          })}
         </div>
       </MainInfoGrid>
+
+      <Pagination />
     </Background>
   );
 }
