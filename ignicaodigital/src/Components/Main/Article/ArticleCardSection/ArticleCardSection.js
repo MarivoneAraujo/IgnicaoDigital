@@ -13,22 +13,17 @@ import {
   BuyButton,
 } from "./styled";
 
-function Card() {
+function Card(props) {
   return (
     <StyledCard>
       <NoImg src={noimage} />
 
       <ContentStyle>
-        <p>FÓRMULA DE LANÇAMENTO</p>
+        <p>{props.title}</p>
         <p>
-          Por <strong>Érico Rocha</strong>
+          Por <strong>{props.author}</strong>
         </p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </p>
+        <p>{props.text}</p>
       </ContentStyle>
 
       <PostDividerStyle>

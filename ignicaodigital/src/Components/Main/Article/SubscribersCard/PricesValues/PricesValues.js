@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Slider from "@material-ui/core/Slider";
-import Radio from "@material-ui/core/Radio";
-import { CentralStyle, RadioGrid } from "./styled";
+import { CentralStyle, RadioGrid,  Justify, Checkbox1, Checkbox2, Checkbox3, Checkbox4, Checkbox5 } from "./styled";
+
 
 function PricesAndValues() {
   const [value, setValue] = useState([0, 5000]);
@@ -21,62 +21,44 @@ function PricesAndValues() {
         <p>
           <strong>Preços</strong>
         </p>
+
         <RadioGrid>
-          <label>
-            <Radio
-              checked={selectedValue === "a"}
-              onChange={handleChange}
-              value="a"
-              color="default"
-              size="small"
-            />
-            {"R$10"}
-          </label>
+        <Checkbox1>
+            <input id="check1" hidden type="checkbox" />
+            <label for="check1" className="checkmark1"></label>
+          </Checkbox1>
 
-          <label>
-            {" "}
-            <Radio
-              checked={selectedValue === "b"}
-              onChange={handleChange}
-              value="b"
-              color="default"
-              size="small"
-            />
-            {"R$10-R$100"}
-          </label>
+          <div>R$10</div>
 
-          <label>
-            <Radio
-              checked={selectedValue === "c"}
-              onChange={handleChange}
-              value="c"
-              color="default"
-              size="small"
-            />
-            {"R$100-R$500"}
-          </label>
+          <Checkbox2>
+            <input id="check2" hidden type="checkbox" />
+            <label for="check2" className="checkmark2"></label>
+          </Checkbox2>
 
-          <label>
-            <Radio
-              checked={selectedValue === "d"}
-              onChange={handleChange}
-              value="d"
-              color="default"
-              size="small"
-            />
-            {"R$500"}
-          </label>
+          <div>R$10-R$100</div>
 
-          <label>
-            <Radio
-              checked={selectedValue === "e"}
-              onChange={handleChange}
-              value="e"
-              color="default"
-              size="small"
-            />
-            {"Todos"}
-          </label>
+          <Checkbox3>
+            <input id="check3" hidden type="checkbox" />
+            <label for="check3" className="checkmark3"></label>
+          </Checkbox3>
+
+          <div>R$100-R$500</div>
+
+          <Checkbox4>
+            <input id="check4" hidden type="checkbox" />
+            <label for="check4" className="checkmark4"></label>
+          </Checkbox4>
+
+          <div>R$500</div>
+
+
+          <Checkbox5>
+            <input id="check5" hidden type="checkbox" />
+            <label for="check5" className="checkmark5"></label>
+          </Checkbox5>
+
+          <div>Todos</div>
+
         </RadioGrid>
       </CentralStyle>
 

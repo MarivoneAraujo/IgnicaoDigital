@@ -5,12 +5,11 @@ export const Central = styled.div`
   justify-content: center;
 `;
 export const NavBar = styled.div`
-  /* border: 1px solid black; */
-  width: 940px;
-  height: 40px;
+  width: 58.75rem;
+  height: 2.5rem;
   margin-top: 1.7rem;
   background-color: #ffffff;
-  box-shadow: 0.5px 0.5px 5px 0.5px lightgray;
+  box-shadow: 0.031rem 0.031rem 0.031rem 0.031rem lightgray;
   display: grid;
   border-radius: 0.3rem 0.3rem;
   grid-template-columns: 0.05fr 0.05fr 0.05fr 0.05fr 0.05fr 1fr 0.05fr 0.05fr 0.1fr 0.05fr;
@@ -29,21 +28,21 @@ export const NavBarIcons = styled.div`
 
 export const ClientName = styled.div`
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 17px;
-  letter-spacing: 0px;
+  line-height: 1.063rem;
+  letter-spacing: 0;
   text-align: right;
 `;
 
 export const VIP = styled.div`
   font-family: "Inter", sans-serif;
-  font-size: 9px;
+  font-size: 0.563rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 13px;
-  letter-spacing: 0px;
+  line-height: 0.813rem;
+  letter-spacing: 0;
   text-align: right;
   color: #2c2c2c;
 `;
