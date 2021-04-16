@@ -40,6 +40,7 @@ export const AreaSelect = styled.select`
   padding-left: 2.5rem;
   border-radius: 0.3rem 0.3rem;
   font-family: "Inter", sans-serif;
+  outline: none;
 `;
 export const Apps = styled.div`
   font-family: "Inter", sans-serif;

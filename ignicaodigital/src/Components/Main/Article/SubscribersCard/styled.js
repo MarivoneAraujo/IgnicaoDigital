@@ -2,41 +2,41 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   background-color: #ffff;
-  width: 290px;
-  height: 1032px;
-  margin-left: 20px;
-  margin-top: 25px;
-  box-shadow: 0.5px 0.5px 5px 0.5px lightgray;
+  width: 18.125rem;
+  height: 64.5rem;
+  margin-left: 1.25rem;
+  margin-top: 1.563rem;
+  box-shadow: 0.031rem 0.031rem 0.313rem 0.031rem lightgray;
   border-radius: 0.3rem 0.3rem;
 `;
 
 export const CategoriesStyle = styled.div`
   font-family: "Inter", sans-serif;
-  margin: 16px;
-  padding-bottom: 30px;
+  margin: 1rem;
+  padding-bottom: 1.875rem;
 `;
 
 export const StarGridStyle = styled.div`
   font-family: "Inter", sans-serif;
-  margin: 5px;
+  margin: 0.313rem;
   width: 280px;
-  font-size: 13px;
+  font-size: 0.813rem;
 `;
 
 export const Button = styled.button`
   border: none;
-  margin-top: 20px;
-  border-radius: 10px;
-  width: 230px;
-  height: 40px;
+  margin-top: 1.25rem;
+  border-radius: 0.625rem;
+  width: 14.375rem;
+  height: 2.5rem;
   background-color: #696969;
   color: #ffff;
   font-family: "Inter", sans-serif;
-  box-shadow: 0.5px 0.5px 5px 0.5px lightgray;
+  box-shadow: 0.031rem 0.031rem 0.313rem 0.031rem lightgray;
   outline: none;
   :hover {
     cursor: pointer;
-    left: 1px;
+    left: 16rem;
     transform: scale(1.03);
   }
 `;
