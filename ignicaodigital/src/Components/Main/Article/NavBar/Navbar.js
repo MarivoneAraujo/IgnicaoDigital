@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlineCalendar } from "react-icons/hi";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { MdChatBubbleOutline } from "react-icons/md";
 import { AiOutlineStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 import { FiBell } from "react-icons/fi";
+import { FiBellOff } from "react-icons/fi";
 import { FiSearch } from "react-icons/fi";
 import oval from "../../../../assets/oval.png";
 import { Central, NavBar, NavBarIcons, ClientName, VIP } from "./styled";
 
 function Navbar() {
+  const [bellOn, setBellOn] = useState(false);
+  const [starOn, setStarOn] = useState(false);
+
+
   return (
     <Central>
       <NavBar>
@@ -30,13 +36,31 @@ function Navbar() {
         </NavBarIcons>
 
         <NavBarIcons>
-          <AiOutlineStar />
+          {starOn 
+          ? (
+            <div onClick={() => setStarOn(!starOn)}>
+              <AiFillStar />
+            </div>) 
+          : (
+            <div onClick={() => setStarOn(!starOn)}>
+              <AiOutlineStar />
+            </div>
+          )}
         </NavBarIcons>
 
         <div></div>
 
         <NavBarIcons>
-          <FiBell />
+          {bellOn
+          ? (
+            <div onClick={() => setBellOn(!bellOn)}>
+              <FiBellOff/>
+            </div>) 
+          : (
+            <div onClick={() => setBellOn(!bellOn)}>
+              <FiBell />
+            </div>
+          )}
         </NavBarIcons>
 
         <NavBarIcons>

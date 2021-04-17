@@ -15,7 +15,8 @@ import {
   AppsIcons,
 } from "./styled.js";
 
-const Aside = () => {
+function Aside() {
+
   return (
     <Rectangle>
       <MainGrid>
@@ -33,11 +34,16 @@ const Aside = () => {
 
         <div>
           <AreaSelect name="Area">
-            <option value="Area do aluno"> Área do cliente</option>
+            <option value="Area do aluno"> 
+            
+            
+            Área do cliente</option>
             <option value="Area do professor">Área dos cursos</option>
             <option value="Area do professor">Área administrativa</option>
+    
           </AreaSelect>
         </div>
+
         <Apps>
           <div style={{ color: "gray" }}>APPS</div>
           <AppsIcons>

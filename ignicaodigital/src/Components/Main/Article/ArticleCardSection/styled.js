@@ -65,6 +65,7 @@ export const LoveButton = styled.button`
   margin-right: 0.313rem;
   margin-left: 0.313rem;
   margin-bottom: 0.375rem;
+  outline: none;
   :hover {
     cursor: pointer;
     left: 0.063rem;
@@ -85,6 +86,7 @@ export const BuyButton = styled.button`
   margin-right: 0.25rem;
   margin-left: 0.25rem;
   margin-bottom: 0.25rem;
+  outline: none;
   :hover {
     cursor: pointer;
     left: 0.063rem;

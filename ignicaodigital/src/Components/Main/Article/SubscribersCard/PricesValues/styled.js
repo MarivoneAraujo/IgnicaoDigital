@@ -16,10 +16,14 @@ export const RadioGrid = styled.div`
 `;
 
 
-export const Justify = styled.div`
-  text-align: right;
-  padding: 0.3rem;
-`;
+export const TitleStyle = styled.div`
+display: flex;
+flex-direction: row;
+
+justify-content: space-between;
+font-family: "Inter", sans-serif;
+`
+
 
 export const Checkbox1 = styled.label`
 margin-bottom: 0.625rem;
