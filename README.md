@@ -1,12 +1,7 @@
 # Processo seletivo Ignição Digital
 
-<h4 align='center'>
-👉 Status: Concluído ✔️👏
-</h4>
-<br />
-
 ### 🔗 Link do Surge: 
-http://small-pizzas.surge.sh/
+
 <br />
 
 ### 💻 Tecnologias:
