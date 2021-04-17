@@ -13,10 +13,10 @@
 - Material-UI
 - CSS
 
-### Página finalizada:
+### 📃 Página finalizada:
 [link text](http://dev.nodeca.com)
 
-### Como executar:
+### 🔨 Como executar:
 Clone o repositório com
 ```
 https://github.com/MarivoneAraujo/IgnicaoDigital.git
