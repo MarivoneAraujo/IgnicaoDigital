@@ -29,6 +29,3 @@ Inicie a aplicação com
 ```
 npm run start
 ```
-### 📷 Prints:
-
-<hr />
