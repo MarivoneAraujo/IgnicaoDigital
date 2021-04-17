@@ -1,7 +1,7 @@
 # Processo seletivo Ignição Digital
 
 ### 📃 Página finalizada:
-Acesse [ aqui] para visualização rápida(https://marivone-araujo-id.surge.sh/)
+Acesse [ aqui](https://marivone-araujo-id.surge.sh/) para visualização rápida.
 
 ### 💻 Tecnologias:
 - React.js
