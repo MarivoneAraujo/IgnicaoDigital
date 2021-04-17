@@ -26,4 +26,5 @@ Inicie a aplicação com
 npm run start
 ```
 <br/>
-#### Desenvolvido por Marivone Araújo, em 04/2021.
+
+### Desenvolvido por Marivone Araújo, em 04/2021.
