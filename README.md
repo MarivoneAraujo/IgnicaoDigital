@@ -1,8 +1,7 @@
 # Processo seletivo Ignição Digital
 
-### 🔗 Link do Surge: 
-
-<br />
+### 📃 Página finalizada:
+[link text](http://dev.nodeca.com)
 
 ### 💻 Tecnologias:
 - React.js
@@ -12,9 +11,6 @@
 - React Icons
 - Material-UI
 - CSS
-
-### 📃 Página finalizada:
-[link text](http://dev.nodeca.com)
 
 ### 🔨 Como executar:
 Clone o repositório com
