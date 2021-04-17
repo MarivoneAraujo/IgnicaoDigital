@@ -8,7 +8,7 @@ import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
 import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAltOutlined";
 import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
 import Box from "@material-ui/core/Box";
-import { StarsGrid, Justify, CentralStyle } from "./styled.js";
+import {StarsGrid, Justify, CentralStyle} from "./styled"
 
 const customIcons = {
   1: {

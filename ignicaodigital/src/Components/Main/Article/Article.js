@@ -5,7 +5,7 @@ import { BsList } from "react-icons/bs";
 import ArticleCardSection from "./ArticleCardSection/ArticleCardSection";
 import BreadCrumbs from "./BreadCrumbs/BreadCrumbs";
 import SubscribersCard from "../Article/SubscribersCard/SubscribersCard";
-import Pagination from "./Pagination/Pagination";
+import ReactPaginate from "react-paginate";
 import {
   Background,
   FilterResultsBar,
@@ -15,56 +15,39 @@ import {
   ListIconWrapper,
   StyledInput,
 } from "./styled";
+import { lists } from "./List";
+import Article from "../Article/Article.css";
 
 function MainContent() {
-  const list = [
-    {
-      title: "1 Fórmula de Lançamento",
-      author: "Érico Rocha",
-      text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-
-    {
-      title: "2 Fórmula de Lançamento",
-      author: "Érico Rocha",
-      text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-
-    {
-      title: "3 Fórmula de Lançamento",
-      author: "Érico Rocha",
-      text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-
-    {
-      title: "4 Fórmula de Lançamento",
-      author: "Érico Rocha",
-      text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-
-    {
-      title: "5 Fórmula de Lançamento",
-      author: "Érico Rocha",
-      text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-  ];
-
   const [textInput, setTextInput] = useState("");
+
+  const [list, setLists] = useState(lists.slice(0, 200));
+  const [pageNumber, setPageNumber] = useState(0);
 
   const handleTextInput = (e) => {
     setTextInput(e.target.value);
   };
 
+  const cardsPerPage = 5;
+  const pagesVisited = pageNumber * cardsPerPage;
 
   const filteredCards = list.filter((a) => {
     const title = a.title;
     return title.indexOf(textInput.toLowerCase()) > -1;
   });
+
+  const displayCards = filteredCards
+    .slice(pagesVisited, pagesVisited + cardsPerPage)
+    .map((c) => {
+      return (
+        <ArticleCardSection title={c.title} author={c.author} text={c.text} />
+      );
+    });
+
+  const pageCount = Math.ceil(list.length / cardsPerPage);
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
   return (
     <Background>
@@ -113,19 +96,21 @@ function MainContent() {
             value={textInput}
           />
 
-          {filteredCards.map((cards) => {
-            return (
-              <ArticleCardSection
-                title={cards.title}
-                author={cards.author}
-                text={cards.text}
-              />
-            );
-          })}
+          {displayCards}
         </div>
       </MainInfoGrid>
 
-      <Pagination />
+      <ReactPaginate
+        previousLabel={"Previous"}
+        nextLabel={"Next"}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={"paginationBttns"}
+        previousLinkClassName={"previousBttn"}
+        nextLinkClassName={"nextBttn"}
+        disabledClassName={"paginationDisabled"}
+        activeClassName={"paginationActive"}
+      />
     </Background>
   );
 }

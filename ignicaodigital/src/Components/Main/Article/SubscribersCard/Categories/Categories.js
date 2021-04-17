@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CentralStyle,
   CategoryGrid,
@@ -11,6 +11,15 @@ import {
 } from "./styled";
 
 function Categories() {
+  const [value, setValue] = useState([]);
+
+  const handleChange = (e) => {
+    let data = value;
+    data.push(e.target.value);
+    setValue(value);
+    // console.log(value);
+  };
+
   return (
     <div>
       <CentralStyle>
@@ -20,7 +29,13 @@ function Categories() {
 
         <CategoryGrid>
           <CheckboxA>
-            <input id="checkA" hidden type="checkbox" />
+            <input
+              id="checkA"
+              hidden
+              type="checkbox"
+              value="ericorocha"
+              onChange={(e) => handleChange(e)}
+            />
             <label for="checkA" className="checkmarkA"></label>
           </CheckboxA>
 
@@ -29,7 +44,13 @@ function Categories() {
           <Justify>1920</Justify>
 
           <CheckboxB>
-            <input id="checkB" hidden type="checkbox" />
+            <input
+              id="checkB"
+              hidden
+              type="checkbox"
+              value="desafio67"
+              onChange={(e) => handleChange(e)}
+            />
             <label for="checkB" className="checkmarkB"></label>
           </CheckboxB>
 
@@ -38,7 +59,13 @@ function Categories() {
           <Justify>1820</Justify>
 
           <CheckboxC>
-            <input id="checkC" hidden type="checkbox" />
+            <input
+              id="checkC"
+              hidden
+              type="checkbox"
+              value="formuladelancamento"
+              onChange={(e) => handleChange(e)}
+            />
             <label for="checkC" className="checkmarkC"></label>
           </CheckboxC>
 
@@ -47,7 +74,13 @@ function Categories() {
           <Justify>462</Justify>
 
           <CheckboxD>
-            <input id="checkD" hidden type="checkbox" />
+            <input
+              id="checkD"
+              hidden
+              type="checkbox"
+              value="klickpages"
+              onChange={(e) => handleChange(e)}
+            />
             <label for="checkD" className="checkmarkD"></label>
           </CheckboxD>
 
@@ -56,7 +89,13 @@ function Categories() {
           <Justify>6556</Justify>
 
           <CheckboxE>
-            <input id="checkE" hidden type="checkbox" />
+            <input
+              id="checkE"
+              hidden
+              type="checkbox"
+              value="audios"
+              onChange={(e) => handleChange(e)}
+            />
             <label for="checkE" className="checkmarkE"></label>
           </CheckboxE>
 

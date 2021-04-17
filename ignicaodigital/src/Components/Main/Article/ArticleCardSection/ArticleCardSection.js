@@ -35,8 +35,8 @@ function Card(props) {
         <div>
           <p
             style={{
-              marginLeft: "40px",
-              fontSize: "15px",
+              marginLeft: "2.5rem",
+              fontSize: "0.938rem",
             }}
           >
             R$2500
@@ -44,13 +44,11 @@ function Card(props) {
         </div>
         <div>
           <LoveButton>
-            {" "}
             <FaRegHeart /> AMEI
           </LoveButton>
         </div>
         <div>
           <BuyButton>
-            {" "}
             <FiShoppingBag /> COMPRAR
           </BuyButton>
         </div>
