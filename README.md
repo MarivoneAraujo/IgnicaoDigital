@@ -5,7 +5,7 @@
 <br />
 
 ### 💻 Tecnologias:
-- [React.js](https://pt-br.reactjs.org/)
+- React.js
 
 ### 🎨 Layout:
 - Styled-componentes
@@ -17,7 +17,7 @@
 [link text](http://dev.nodeca.com)
 
 ### Como executar:
-Clone o repositório
+Clone o repositório com
 ```
 https://github.com/MarivoneAraujo/IgnicaoDigital.git
 ```
