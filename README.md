@@ -8,9 +8,11 @@ Acesse [ aqui](https://marivone-araujo-id.surge.sh/) para visualização rápida
 
 ### 🎨 Layout:
 - Styled-componentes
-- React Icons
 - Material-UI
 - CSS
+- React Icons
+- React pagination
+
 
 ### 🔨 Como executar:
 Clone o repositório com
